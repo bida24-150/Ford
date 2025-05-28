@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Ford | Built Ford </title>
+  
+  
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  
+  
+  <style>
+    :root {
+      --ford-blue: #00274C;
+      --ford-orange: #E56310;
+      --ford-light: #F5F5F5;
+    }
+    
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+    
+    .navbar {
+      background-color: var(--ford-blue) !important;
+      padding: 1rem 0;
+      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    }
+    
+    .navbar-brand img {
+      height: 40px;
+    }
+    
+    .nav-link {
+      font-weight: 500;
+      padding: 0.5rem 1rem;
+      transition: all 0.3s ease;
+    }
+    
+    .nav-link:hover {
+      color: var(--ford-orange) !important;
+    }
+    
+    .hero-section {
+      background: url('https://www.ford.com/cmslibs/content/dam/vdm_ford/live/en_us/ford/nameplate/f-150/2023/collections/3-2/23_FRD_F15_1005.jpg') no-repeat center center;
+      background-size: cover;
+      min-height: 80vh;
+      position: relative;
+    }
+    
+    .hero-overlay {
+      background-color: rgba(0, 39, 76, 0.7);
+    }
+    
+    .btn-ford {
+      background-color: var(--ford-orange);
+      color: white;
+      border-radius: 50px;
+      padding: 0.75rem 2rem;
+      font-weight: 600;
+      transition: all 0.3s ease;
+    }
+    
+    .btn-ford:hover {
+      background-color: #d4560d;
+      color: white;
+      transform: translateY(-2px);
+    }
+    
+    .btn-outline-light {
+      border-radius: 50px;
+      padding: 0.75rem 2rem;
+      font-weight: 600;
+      transition: all 0.3s ease;
+    }
+    
+    .contact-form {
+      background-color: white;
+      border-radius: 10px;
+      padding: 2rem;
+      box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    }
+    
+    .form-control:focus {
+      border-color: var(--ford-orange);
+      box-shadow: 0 0 0 0.25rem rgba(229, 99, 16, 0.25);
+    }
+    
+    footer {
+      background-color: #212529;
+    }
+    
+    footer a {
+      transition: color 0.3s ease;
+    }
+    
+    footer a:hover {
+      color: var(--ford-orange) !important;
+    }
+  </style>
+  
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+</head>
+<body>
+  
+  <nav class="navbar navbar-expand-lg navbar-dark sticky-top">
+    <div class="container">
+      <a class="navbar-brand" href="index.html">
+        <img src="Yes I suffer from Blue Oval Addiction_.jpeg" alt="Ford" height="40">
+      </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#fordNavbar">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="fordNavbar">
+        <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+          <li class="nav-item">
+            <a class="nav-link active" href="index.html">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="vehicles.html">Vehicles</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="build-prices.html">Build & Price</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="dealers.html">Dealers</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="contact.html">Contact</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  
+  <section class="hero-section d-flex align-items-center">
+    <div class="hero-overlay w-100 h-100 position-absolute"></div>
+    <div class="container position-relative text-white py-5">
+      <div class="row">
+        <div class="col-lg-6">
+          <h1 class="display-3 fw-bold mb-4">Built Ford Tough</h1>
+          <p class="lead mb-4">Built Ford Tough emphasizes the company's commitment to durability, strength, and reliability in their vehicles. </p>
+          <div class="d-flex flex-wrap gap-3">
+            <a href="build-prices.html" class="btn btn-ford">Build Yours</a>
+            <a href="vehicles.html" class="btn btn-outline-light">Explore Models</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  
+  <div class="container my-5">
+    <div class="row justify-content-center">
+      <div class="col-lg-8">
+        <div class="contact-form">
+          <h2 class="text-center mb-4">Get in Touch</h2>
+          <form id="quickContactForm" novalidate>
+            <div class="row g-3">
+              <div class="col-md-6">
+                <label for="name" class="form-label">Name*</label>
+                <input type="text" class="form-control" id="name" required>
+                <div class="invalid-feedback">Please provide your name.</div>
+              </div>
+              <div class="col-md-6">
+                <label for="email" class="form-label">Email*</label>
+                <input type="email" class="form-control" id="email" required>
+                <div class="invalid-feedback">Please provide a valid email.</div>
+              </div>
+              <div class="col-12">
+                <label for="message" class="form-label">Message*</label>
+                <textarea class="form-control" id="message" rows="4" required></textarea>
+                <div class="invalid-feedback">Please enter your message.</div>
+              </div>
+              <div class="col-12 text-center">
+                <button type="submit" class="btn btn-ford px-4">Send Message</button>
+              </div>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+  <footer class="bg-dark text-white pt-5 pb-4">
+    <div class="container">
+      <div class="row g-4">
+        
+        
+        <div class="col-lg-3 col-md-6">
+          <h5 class="text-uppercase text-warning mb-4">Quick Links</h5>
+          <ul class="list-unstyled">
+            <li class="mb-2"><a href="vehicles.html" class="text-white text-decoration-none">All Vehicles</a></li>
+            <li class="mb-2"><a href="build-prices.html" class="text-white text-decoration-none">Build & Price</a></li>
+            <li class="mb-2"><a href="dealers.html" class="text-white text-decoration-none">Find a Dealer</a></li>
+            <li class="mb-2"><a href="contact.html" class="text-white text-decoration-none">Contact Us</a></li>
+          </ul>
+        </div>
+        
+        
+        <div class="col-lg-3 col-md-6">
+          <h5 class="text-uppercase text-warning mb-4">Services</h5>
+          <ul class="list-unstyled">
+            <li class="mb-2"><a href="#" class="text-white text-decoration-none">FordPass Connect</a></li>
+            <li class="mb-2"><a href="#" class="text-white text-decoration-none">Owner Manuals</a></li>
+            <li class="mb-2"><a href="#" class="text-white text-decoration-none">Schedule Service</a></li>
+            <li class="mb-2"><a href="#" class="text-white text-decoration-none">Recall Information</a></li>
+          </ul>
+        </div>
+        
+        
+        <div class="col-lg-3 col-md-6">
+          <h5 class="text-uppercase text-warning mb-4">About Ford</h5>
+          <ul class="list-unstyled">
+            <li class="mb-2"><a href="#" class="text-white text-decoration-none">Our Company</a></li>
+            <li class="mb-2"><a href="#" class="text-white text-decoration-none">Sustainability</a></li>
+            <li class="mb-2"><a href="#" class="text-white text-decoration-none">Careers</a></li>
+            <li class="mb-2"><a href="#" class="text-white text-decoration-none">Investors</a></li>
+          </ul>
+        </div>
+        
+        
+        <div class="col-lg-3 col-md-6">
+          <h5 class="text-uppercase text-warning mb-4">Connect With Us</h5>
+          <div class="mb-4">
+            <a href="#" class="text-white me-3"><i class="bi bi-facebook fs-4"></i></a>
+            <a href="#" class="text-white me-3"><i class="bi bi-twitter-x fs-4"></i></a>
+            <a href="#" class="text-white me-3"><i class="bi bi-instagram fs-4"></i></a>
+            <a href="#" class="text-white me-3"><i class="bi bi-youtube fs-4"></i></a>
+          </div>
+          <div>
+            <p class="mb-1"><i class="bi bi-telephone text-warning me-2"></i> +267 7768 2269</p>
+            <p class="mb-1"><i class="bi bi-envelope text-warning me-2"></i> lonemzi07@gmail.com</p>
+          </div>
+        </div>
+      </div>
+      
+      <hr class="my-4 bg-secondary">
+      
+     
+      <div class="row">
+        <div class="col-md-6 text-center text-md-start">
+          <p class="small mb-0">&copy; 2023 Ford Motor Company. All rights reserved.</p>
+        </div>
+        <div class="col-md-6 text-center text-md-end">
+          <a href="#" class="text-white text-decoration-none small me-3">Privacy Policy</a>
+          <a href="#" class="text-white text-decoration-none small me-3">Terms of Use</a>
+          <a href="#" class="text-white text-decoration-none small">Cookie Settings</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+  
+  
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      
+      const form = document.getElementById('quickContactForm');
+      
+      form.addEventListener('submit', function(event) {
+        event.preventDefault();
+        event.stopPropagation();
+        
+        if (form.checkValidity()) {
+          
+          setTimeout(function() {
+            
+            alert('Thank you! Your message has been sent. We will contact you soon.');
+            
+          
+            form.reset();
+            form.classList.remove('was-validated');
+          }, 1000);
+        }
+        
+        form.classList.add('was-validated');
+      }, false);
+      
+      
+      document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener('click', function(e) {
+          e.preventDefault();
+          document.querySelector(this.getAttribute('href')).scrollIntoView({
+            behavior: 'smooth'
+          });
+        });
+      });
+      
+      
+      document.querySelector('footer .small').textContent = `© ${new Date().getFullYear()} Ford Motor Company. All rights reserved.`;
+    });
+  </script>
+</body>
+</html>

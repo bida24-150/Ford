@@ -1,0 +1,144 @@
+/* Custom Ford Color Scheme */
+:root {
+    --ford-blue: #00274C;
+    --ford-orange: #E56310;
+    --ford-light: #F5F5F5;
+  }
+  
+  /* Override Bootstrap Navbar */
+  .navbar {
+    background-color: var(--ford-blue) !important;
+    padding: 1rem 0;
+  }
+  
+  .navbar-brand img {
+    height: 40px;
+  }
+  
+  /* Custom Button Styles */
+  .btn-ford {
+    background-color: var(--ford-orange);
+    color: white;
+    border-radius: 50px;
+    padding: 0.75rem 2rem;
+    font-weight: 600;
+  }
+  
+  .btn-ford:hover {
+    background-color: #d4560d;
+    color: white;
+  }
+  
+  /* Hero Section */
+  .hero-section {
+    background: url('../images/hero-bg.jpg') no-repeat center center;
+    background-size: cover;
+    min-height: 80vh;
+    position: relative;
+  }
+  
+  .hero-overlay {
+    background-color: rgba(0, 39, 76, 0.7);
+  }
+  
+  /* Responsive Adjustments */
+  @media (max-width: 768px) {
+    .navbar-brand img {
+      height: 30px;
+    }
+    
+    .hero-section {
+      min-height: 60vh;
+    }
+    /* Base mobile styles */
+.container {
+  width: 100%;
+  padding: 15px;
+}
+
+/* Tablet breakpoint */
+@media (min-width: 768px) {
+  .container {
+      width: 750px;
+  }
+}
+
+/* Desktop breakpoint */
+@media (min-width: 1200px) {
+  .container {
+      width: 1170px;
+  }
+}
+/* Consistent theming */
+:root {
+  --ford-blue: #00274C;
+  --ford-orange: #E56310;
+  --text-dark: #333;
+}
+
+body {
+  font-family: 'Ford Antenna', Arial, sans-serif;
+  color: var(--text-dark);
+}
+
+.button {
+  background-color: var(--ford-blue);
+  color: white;
+  padding: 12px 24px;
+  border-radius: 4px;
+}
+  }
+  /* Footer Styles */
+footer a {
+  transition: color 0.3s ease;
+}
+
+footer a:hover {
+  color: var(--ford-orange) !important;
+}
+
+.footer-newsletter {
+  background-color: rgba(255,255,255,0.1);
+  border: 1px solid rgba(255,255,255,0.2);
+}
+
+.footer-newsletter .form-control {
+  background-color: rgba(255,255,255,0.1);
+  border: none;
+  color: white;
+}
+
+.footer-newsletter .form-control::placeholder {
+  color: rgba(255,255,255,0.6);
+}
+
+.footer-newsletter .btn {
+  border-left: 1px solid rgba(255,255,255,0.2);
+}
+/* Footer Styles */
+footer a {
+  transition: color 0.3s ease;
+}
+
+footer a:hover {
+  color: var(--ford-orange) !important;
+}
+
+.footer-newsletter {
+  background-color: rgba(255,255,255,0.1);
+  border: 1px solid rgba(255,255,255,0.2);
+}
+
+.footer-newsletter .form-control {
+  background-color: rgba(255,255,255,0.1);
+  border: none;
+  color: white;
+}
+
+.footer-newsletter .form-control::placeholder {
+  color: rgba(255,255,255,0.6);
+}
+
+.footer-newsletter .btn {
+  border-left: 1px solid rgba(255,255,255,0.2);
+}

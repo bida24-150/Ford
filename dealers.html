@@ -1,0 +1,432 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Find a Ford Dealer | Ford</title>
+    
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+    <style>
+        :root {
+            --ford-blue: #00274C;
+            --ford-orange: #E56310;
+            --ford-light: #F5F5F5;
+        }
+        
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        
+        .navbar {
+            background-color: var(--ford-blue) !important;
+        }
+        
+        .dealer-hero {
+            background: linear-gradient(rgba(0, 39, 76, 0.8), rgba(0, 39, 76, 0.8)), 
+                        url('https://www.ford.com/cmslibs/content/dam/vdm_ford/live/en_us/ford/nameplate/f-150/2023/collections/3-2/23_FRD_F15_1005.jpg') center/cover;
+            color: white;
+            padding: 100px 0;
+        }
+        
+        .purchase-step {
+            border-left: 4px solid var(--ford-orange);
+            padding-left: 20px;
+            margin-bottom: 30px;
+        }
+        
+        .guarantee-card {
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            transition: transform 0.3s ease;
+            height: 100%;
+        }
+        
+        .guarantee-card:hover {
+            transform: translateY(-5px);
+        }
+        
+        .dealer-card {
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+            transition: all 0.3s ease;
+        }
+        
+        .dealer-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(0,0,0,0.15);
+        }
+        
+        .btn-ford {
+            background-color: var(--ford-orange);
+            color: white;
+            font-weight: 600;
+        }
+        
+        .btn-ford:hover {
+            background-color: #d4560d;
+            color: white;
+        }
+        
+        .accordion-button:not(.collapsed) {
+            background-color: rgba(0, 39, 76, 0.1);
+            color: var(--ford-blue);
+        }
+        
+        .accordion-button:focus {
+            box-shadow: 0 0 0 0.25rem rgba(229, 99, 16, 0.25);
+        }
+    </style>
+</head>
+<body>
+    
+    <nav class="navbar navbar-expand-lg navbar-dark sticky-top">
+        <div class="container">
+            <a class="navbar-brand" href="index.html">
+                <img src="Yes I suffer from Blue Oval Addiction_.jpeg" alt="Ford" height="40">
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#fordNavbar">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="fordNavbar">
+                <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="vehicles.html">Vehicles</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="build-prices.html">Build & Price</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" href="dealers.html">Dealers</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="contact.html">Contact</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    
+    <section class="dealer-hero text-center">
+        <div class="container">
+            <h1 class="display-4 fw-bold mb-3">Find a Ford Dealer</h1>
+            <p class="lead mb-4">Visit your local dealer to explore, test drive, and purchase your perfect Ford vehicle</p>
+            <div class="row justify-content-center">
+                <div class="col-md-8">
+                    <div class="input-group mb-3">
+                        <input type="text" class="form-control form-control-lg" id="dealerSearch" placeholder="Enter your city or ZIP code">
+                        <button class="btn btn-ford" type="button" id="searchButton">Search</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    
+    <section class="py-5 bg-light">
+        <div class="container">
+            <h2 class="text-center mb-5">How to Purchase Your Ford</h2>
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="purchase-step">
+                        <h3><i class="bi bi-search me-2"></i> 1. Research & Select</h3>
+                        <p>Explore our vehicle lineup online or visit a dealer to find the perfect Ford for your needs.</p>
+                    </div>
+                    <div class="purchase-step">
+                        <h3><i class="bi bi-cash-coin me-2"></i> 3. Financing Options</h3>
+                        <p>Work with our financial specialists to find the best payment plan for your budget.</p>
+                    </div>
+                    <div class="purchase-step">
+                        <h3><i class="bi bi-key me-2"></i> 5. Take Delivery</h3>
+                        <p>Complete paperwork and drive away in your new Ford with our full support.</p>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="purchase-step">
+                        <h3><i class="bi bi-car-front me-2"></i> 2. Test Drive</h3>
+                        <p>Schedule a test drive to experience the vehicle's performance and features firsthand.</p>
+                    </div>
+                    <div class="purchase-step">
+                        <h3><i class="bi bi-pen me-2"></i> 4. Customize & Order</h3>
+                        <p>Finalize your vehicle configuration and place your order with your dealer.</p>
+                    </div>
+                    <div class="purchase-step">
+                        <h3><i class="bi bi-headset me-2"></i> 6. After-Sale Support</h3>
+                        <p>Access our comprehensive warranty and maintenance services.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    
+    <section class="py-5">
+        <div class="container">
+            <h2 class="text-center mb-5">Ford Guarantees</h2>
+            <div class="row g-4">
+                <div class="col-md-4">
+                    <div class="card guarantee-card h-100">
+                        <div class="card-body">
+                            <div class="text-center mb-3">
+                                <i class="bi bi-shield-check text-ford-orange" style="font-size: 2rem; color: var(--ford-orange);"></i>
+                            </div>
+                            <h3 class="text-center">Quality Assurance</h3>
+                            <p>Every Ford vehicle meets our rigorous quality standards with comprehensive pre-delivery inspections.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card guarantee-card h-100">
+                        <div class="card-body">
+                            <div class="text-center mb-3">
+                                <i class="bi bi-award" style="font-size: 2rem; color: var(--ford-orange);"></i>
+                            </div>
+                            <h3 class="text-center">Warranty Protection</h3>
+                            <p>3-year/36,000-mile comprehensive warranty and 5-year/60,000-mile powertrain warranty.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card guarantee-card h-100">
+                        <div class="card-body">
+                            <div class="text-center mb-3">
+                                <i class="bi bi-arrow-repeat" style="font-size: 2rem; color: var(--ford-orange);"></i>
+                            </div>
+                            <h3 class="text-center">Satisfaction Guarantee</h3>
+                            <p>30-day/1,000-mile exchange program if you're not completely satisfied with your purchase.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    
+    <section class="py-5 bg-light">
+        <div class="container">
+            <h2 class="text-center mb-5">Featured Ford Dealers</h2>
+            <div class="row g-4" id="dealerResults">
+                
+            </div>
+        </div>
+    </section>
+
+    <
+    <section class="py-5">
+        <div class="container">
+            <h2 class="text-center mb-5">Frequently Asked Questions</h2>
+            <div class="accordion" id="faqAccordion">
+                <div class="accordion-item">
+                    <h2 class="accordion-header">
+                        <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#faq1">
+                            What documents do I need to purchase a vehicle?
+                        </button>
+                    </h2>
+                    <div id="faq1" class="accordion-collapse collapse show" data-bs-parent="#faqAccordion">
+                        <div class="accordion-body">
+                            You'll need a valid driver's license, proof of insurance, and proof of income if financing. For trade-ins, bring your current vehicle's title and registration.
+                        </div>
+                    </div>
+                </div>
+                <div class="accordion-item">
+                    <h2 class="accordion-header">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq2">
+                            What financing options are available?
+                        </button>
+                    </h2>
+                    <div id="faq2" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                        <div class="accordion-body">
+                            Ford Credit offers competitive rates with terms from 24 to 84 months. We also work with all major banks and credit unions to find you the best rate.
+                        </div>
+                    </div>
+                </div>
+                <div class="accordion-item">
+                    <h2 class="accordion-header">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq3">
+                            Can I schedule a test drive online?
+                        </button>
+                    </h2>
+                    <div id="faq3" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                        <div class="accordion-body">
+                            Yes! Use our dealer locator to find your preferred dealer and schedule a test drive directly through their website or by calling them.
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    
+    <footer class="bg-dark text-white pt-5 pb-4">
+        <div class="container">
+            <div class="row g-4">
+                <div class="col-lg-3 col-md-6">
+                    <h5 class="text-uppercase text-warning mb-4">Quick Links</h5>
+                    <ul class="list-unstyled">
+                        <li class="mb-2"><a href="vehicles.html" class="text-white text-decoration-none">All Vehicles</a></li>
+                        <li class="mb-2"><a href="build-prices.html" class="text-white text-decoration-none">Build & Price</a></li>
+                        <li class="mb-2"><a href="dealers.html" class="text-white text-decoration-none">Find a Dealer</a></li>
+                        <li class="mb-2"><a href="contact.html" class="text-white text-decoration-none">Contact Us</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                    <h5 class="text-uppercase text-warning mb-4">Services</h5>
+                    <ul class="list-unstyled">
+                        <li class="mb-2"><a href="#" class="text-white text-decoration-none">FordPass Connect</a></li>
+                        <li class="mb-2"><a href="#" class="text-white text-decoration-none">Schedule Service</a></li>
+                        <li class="mb-2"><a href="#" class="text-white text-decoration-none">Recall Information</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                    <h5 class="text-uppercase text-warning mb-4">About Ford</h5>
+                    <ul class="list-unstyled">
+                        <li class="mb-2"><a href="#" class="text-white text-decoration-none">Our Company</a></li>
+                        <li class="mb-2"><a href="#" class="text-white text-decoration-none">Sustainability</a></li>
+                        <li class="mb-2"><a href="#" class="text-white text-decoration-none">Careers</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                    <h5 class="text-uppercase text-warning mb-4">Connect With Us</h5>
+                    <div class="mb-4">
+                        <a href="#" class="text-white me-3"><i class="bi bi-facebook fs-4"></i></a>
+                        <a href="#" class="text-white me-3"><i class="bi bi-twitter-x fs-4"></i></a>
+                        <a href="#" class="text-white me-3"><i class="bi bi-instagram fs-4"></i></a>
+                        <a href="#" class="text-white me-3"><i class="bi bi-youtube fs-4"></i></a>
+                    </div>
+                    <div>
+                        <p class="mb-1"><i class="bi bi-telephone text-warning me-2"></i> +267 7768 2269</p>
+                        <p class="mb-1"><i class="bi bi-envelope text-warning me-2"></i> lonemzi07@gmail.com</p>
+                    </div>
+                </div>
+            </div>
+            <hr class="my-4 bg-secondary">
+            <div class="row">
+                <div class="col-md-6 text-center text-md-start">
+                    <p class="small mb-0">&copy; <span id="currentYear"></span> Ford Motor Company. All rights reserved.</p>
+                </div>
+                <div class="col-md-6 text-center text-md-end">
+                    <a href="#" class="text-white text-decoration-none small me-3">Privacy Policy</a>
+                    <a href="#" class="text-white text-decoration-none small me-3">Terms of Use</a>
+                    <a href="#" class="text-white text-decoration-none small">Cookie Settings</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            
+            const dealers = [
+                {
+                    name: "Gaborone Ford",
+                    address: "123 Main Street, Gaborone",
+                    phone: "+267 123 4567",
+                    hours: "Mon-Fri: 8:00 AM - 6:00 PM, Sat: 9:00 AM - 4:00 PM",
+                    services: ["New Vehicles", "Used Vehicles", "Service Center", "Parts"],
+                    distance: "2.5 km away"
+                },
+                {
+                    name: "Francistown Ford",
+                    address: "456 Commerce Way, Francistown",
+                    phone: "+267 234 5678",
+                    hours: "Mon-Fri: 8:30 AM - 5:30 PM, Sat: 9:00 AM - 3:00 PM",
+                    services: ["New Vehicles", "Service Center", "Ford Credit"],
+                    distance: "15 km away"
+                },
+                {
+                    name: "Maun Ford",
+                    address: "789 Auto Plaza, Maun",
+                    phone: "+267 345 6789",
+                    hours: "Mon-Fri: 8:00 AM - 5:00 PM, Sat: 9:00 AM - 2:00 PM",
+                    services: ["New Vehicles", "Used Vehicles", "Quick Lane"],
+                    distance: "8 km away"
+                }
+            ];
+
+          
+            function displayDealers(dealerList) {
+                const dealerResults = document.getElementById('dealerResults');
+                dealerResults.innerHTML = '';
+                
+                dealerList.forEach(dealer => {
+                    const servicesList = dealer.services.map(service => 
+                        `<span class="badge bg-light text-dark me-1 mb-1">${service}</span>`
+                    ).join('');
+                    
+                    const dealerCard = `
+                        <div class="col-md-4">
+                            <div class="card dealer-card h-100">
+                                <div class="card-header bg-primary text-white">
+                                    <h4 class="mb-0">${dealer.name}</h4>
+                                </div>
+                                <div class="card-body">
+                                    <p><i class="bi bi-geo-alt"></i> ${dealer.address}</p>
+                                    <p><i class="bi bi-telephone"></i> ${dealer.phone}</p>
+                                    <p><i class="bi bi-clock"></i> ${dealer.hours}</p>
+                                    <p><i class="bi bi-signpost"></i> ${dealer.distance}</p>
+                                    <div class="mb-3">${servicesList}</div>
+                                </div>
+                                <div class="card-footer bg-white">
+                                    <div class="d-flex justify-content-between">
+                                        <a href="contact.html" class="btn btn-sm btn-outline-primary">Contact</a>
+                                        <a href="#" class="btn btn-sm btn-ford">Directions</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    `;
+                    
+                    dealerResults.innerHTML += dealerCard;
+                });
+            }
+
+            displayDealers(dealers);
+
+            document.getElementById('searchButton').addEventListener('click', function() {
+                const searchTerm = document.getElementById('dealerSearch').value.toLowerCase();
+                if (searchTerm.trim() === '') {
+                    displayDealers(dealers);
+                    return;
+                }
+                
+                const filteredDealers = dealers.filter(dealer => 
+                    dealer.name.toLowerCase().includes(searchTerm) || 
+                    dealer.address.toLowerCase().includes(searchTerm)
+                );
+                
+                displayDealers(filteredDealers);
+                
+                if (filteredDealers.length === 0) {
+                    document.getElementById('dealerResults').innerHTML = `
+                        <div class="col-12 text-center py-5">
+                            <h4>No dealers found matching your search</h4>
+                            <p>Try a different location or contact our customer service</p>
+                            <a href="contact.html" class="btn btn-ford">Contact Us</a>
+                        </div>
+                    `;
+                }
+            });
+
+            
+            document.getElementById('currentYear').textContent = new Date().getFullYear();
+
+           
+            const faqItems = document.querySelectorAll('.accordion-button');
+            faqItems.forEach(item => {
+                item.addEventListener('click', function() {
+                    this.querySelector('i').classList.toggle('bi-chevron-down');
+                    this.querySelector('i').classList.toggle('bi-chevron-up');
+                });
+            });
+        });
+    </script>
+</body>
+</html>
